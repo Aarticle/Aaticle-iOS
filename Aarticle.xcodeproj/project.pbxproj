@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B94D8194208FAB5300A09CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D8193208FAB5300A09CAE /* AppDelegate.swift */; };
-		B94D8196208FAB5300A09CAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D8195208FAB5300A09CAE /* ViewController.swift */; };
 		B94D8199208FAB5300A09CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D8197208FAB5300A09CAE /* Main.storyboard */; };
 		B94D819B208FAB5500A09CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94D819A208FAB5500A09CAE /* Assets.xcassets */; };
 		B94D819E208FAB5500A09CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */; };
 		B94D81A7208FAC0800A09CAE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D81A6208FAC0800A09CAE /* LoginController.swift */; };
+		B982EC5B208FB047007AEC51 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B982EC5A208FB047007AEC51 /* extensions.swift */; };
 		D2E4545C6D4FC586D6820513 /* Pods_Aarticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +21,12 @@
 		94309CF8161154E7F8A0536A /* Pods-Aarticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.release.xcconfig"; sourceTree = "<group>"; };
 		B94D8190208FAB5300A09CAE /* Aarticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aarticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94D8193208FAB5300A09CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B94D8195208FAB5300A09CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B94D8198208FAB5300A09CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B94D819A208FAB5500A09CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B94D819D208FAB5500A09CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94D819F208FAB5500A09CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94D81A6208FAC0800A09CAE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B982EC5A208FB047007AEC51 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,9 +80,9 @@
 		B94D8192208FAB5300A09CAE /* Aarticle */ = {
 			isa = PBXGroup;
 			children = (
+				B982EC59208FB032007AEC51 /* Utility */,
 				B94D81A5208FABF200A09CAE /* User */,
 				B94D8193208FAB5300A09CAE /* AppDelegate.swift */,
-				B94D8195208FAB5300A09CAE /* ViewController.swift */,
 				B94D8197208FAB5300A09CAE /* Main.storyboard */,
 				B94D819A208FAB5500A09CAE /* Assets.xcassets */,
 				B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */,
@@ -97,6 +97,14 @@
 				B94D81A6208FAC0800A09CAE /* LoginController.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		B982EC59208FB032007AEC51 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B982EC5A208FB047007AEC51 /* extensions.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94D8196208FAB5300A09CAE /* ViewController.swift in Sources */,
 				B94D81A7208FAC0800A09CAE /* LoginController.swift in Sources */,
 				B94D8194208FAB5300A09CAE /* AppDelegate.swift in Sources */,
+				B982EC5B208FB047007AEC51 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +391,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = Aarticle/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.Aarticle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -399,7 +410,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = Aarticle/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.Aarticle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
