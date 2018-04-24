@@ -1,0 +1,6 @@
+framework module Pods_Aarticle {
+  umbrella header "Pods-Aarticle-umbrella.h"
+
+  export *
+  module * { export * }
+}
