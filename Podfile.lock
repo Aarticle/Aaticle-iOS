@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.2)
   - KeychainSwift (11.0.0)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
@@ -7,17 +7,20 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Result (3.2.4)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - KeychainSwift (~> 11.0)
   - Moya (~> 11.0)
+  - SwiftyJSON (~> 4.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   KeychainSwift: bea6bd9f98af7b8d7ca4aa79fe105c00fab532db
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: ecbf7057d445509319e797742d3617f681e440fe
+PODFILE CHECKSUM: 4c3cfce128ff88e2dd4f31ebbf2ed606dd506fbc
 
 COCOAPODS: 1.4.0
