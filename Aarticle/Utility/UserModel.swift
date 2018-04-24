@@ -45,7 +45,7 @@ struct UserPersistence {
             fatalError("no current user")
         }
         keychain.set(currentUserData, forKey: currentUserKey)
-        setUserToken(token: currentUser.token!)
+//        setUserToken(token: currentUser.token!)
     }
     
     func getCurrentUser() -> User? {
@@ -103,7 +103,7 @@ struct UserPersistence {
         networkStack.login(a: userLogin) { (result) in
             switch result {
             case .success(let userReturned):
-                self.setUserToken(token: userReturned.token!)
+//                self.setUserToken(token: userReturned.token!)
                 callback(true)
             case .failure(let error):
                 
