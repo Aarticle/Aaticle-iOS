@@ -80,10 +80,11 @@
 		B94D8192208FAB5300A09CAE /* Aarticle */ = {
 			isa = PBXGroup;
 			children = (
-				B982EC59208FB032007AEC51 /* Utility */,
-				B94D81A5208FABF200A09CAE /* User */,
+				B982EC5C208FBFCF007AEC51 /* Networking */,
 				B94D8193208FAB5300A09CAE /* AppDelegate.swift */,
+				B94D81A5208FABF200A09CAE /* User */,
 				B94D8197208FAB5300A09CAE /* Main.storyboard */,
+				B982EC59208FB032007AEC51 /* Utility */,
 				B94D819A208FAB5500A09CAE /* Assets.xcassets */,
 				B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */,
 				B94D819F208FAB5500A09CAE /* Info.plist */,
@@ -105,6 +106,13 @@
 				B982EC5A208FB047007AEC51 /* extensions.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		B982EC5C208FBFCF007AEC51 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
