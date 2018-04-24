@@ -19,6 +19,7 @@
 		B9D41A52208FC9CC00A4E16B /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */; };
 		B9D41A54208FCFEA00A4E16B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A53208FCFEA00A4E16B /* AlertViewController.swift */; };
 		B9D41A56208FD06100A4E16B /* Register+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A55208FD06100A4E16B /* Register+Handlers.swift */; };
+		B9D41A5A208FEA2B00A4E16B /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A59208FEA2B00A4E16B /* ArticleViewController.swift */; };
 		D2E4545C6D4FC586D6820513 /* Pods_Aarticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayer.swift; sourceTree = "<group>"; };
 		B9D41A53208FCFEA00A4E16B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		B9D41A55208FD06100A4E16B /* Register+Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register+Handlers.swift"; sourceTree = "<group>"; };
+		B9D41A59208FEA2B00A4E16B /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				B94D8193208FAB5300A09CAE /* AppDelegate.swift */,
-				B94D81A5208FABF200A09CAE /* User */,
 				B94D8197208FAB5300A09CAE /* Main.storyboard */,
+				B9D41A59208FEA2B00A4E16B /* ArticleViewController.swift */,
+				B94D81A5208FABF200A09CAE /* User */,
 				B9CC288D208FC1D30000F77E /* Models */,
 				B9704A76208FC14700AD7215 /* api.swift */,
 				B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */,
@@ -277,6 +280,7 @@
 				B9D41A54208FCFEA00A4E16B /* AlertViewController.swift in Sources */,
 				B9D41A4E208FC23000A4E16B /* UserModel.swift in Sources */,
 				B9D41A50208FC24E00A4E16B /* ArticleModel.swift in Sources */,
+				B9D41A5A208FEA2B00A4E16B /* ArticleViewController.swift in Sources */,
 				B982EC5B208FB047007AEC51 /* extensions.swift in Sources */,
 				B9D41A52208FC9CC00A4E16B /* NetworkingLayer.swift in Sources */,
 			);
