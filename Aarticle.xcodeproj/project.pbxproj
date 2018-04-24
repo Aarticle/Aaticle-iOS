@@ -13,9 +13,12 @@
 		B94D819B208FAB5500A09CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94D819A208FAB5500A09CAE /* Assets.xcassets */; };
 		B94D819E208FAB5500A09CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */; };
 		B94D81A7208FAC0800A09CAE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D81A6208FAC0800A09CAE /* LoginController.swift */; };
+		D2E4545C6D4FC586D6820513 /* Pods_Aarticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aarticle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94309CF8161154E7F8A0536A /* Pods-Aarticle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.release.xcconfig"; sourceTree = "<group>"; };
 		B94D8190208FAB5300A09CAE /* Aarticle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aarticle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94D8193208FAB5300A09CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94D8195208FAB5300A09CAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B94D819D208FAB5500A09CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94D819F208FAB5500A09CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94D81A6208FAC0800A09CAE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E4545C6D4FC586D6820513 /* Pods_Aarticle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BAFC04188C1CA0B23ED4B50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4F73C8270A95F2301EF0F0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */,
+				94309CF8161154E7F8A0536A /* Pods-Aarticle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B94D8187208FAB5200A09CAE = {
 			isa = PBXGroup;
 			children = (
 				B94D8192208FAB5300A09CAE /* Aarticle */,
 				B94D8191208FAB5300A09CAE /* Products */,
+				B4F73C8270A95F2301EF0F0D /* Pods */,
+				4BAFC04188C1CA0B23ED4B50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B94D81A2208FAB5500A09CAE /* Build configuration list for PBXNativeTarget "Aarticle" */;
 			buildPhases = (
+				D8AACCE5233C9CE579F3654A /* [CP] Check Pods Manifest.lock */,
 				B94D818C208FAB5200A09CAE /* Sources */,
 				B94D818D208FAB5200A09CAE /* Frameworks */,
 				B94D818E208FAB5200A09CAE /* Resources */,
+				B2EC9FE0C1EE96DD2151DCA4 /* [CP] Embed Pods Frameworks */,
+				3006D7CC6496E888FD367EF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3006D7CC6496E888FD367EF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2EC9FE0C1EE96DD2151DCA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8AACCE5233C9CE579F3654A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aarticle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B94D818C208FAB5200A09CAE /* Sources */ = {
@@ -290,15 +377,13 @@
 		};
 		B94D81A3208FAB5500A09CAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = Aarticle/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.Aarticle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -308,15 +393,13 @@
 		};
 		B94D81A4208FAB5500A09CAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94309CF8161154E7F8A0536A /* Pods-Aarticle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S44SNCV32X;
 				INFOPLIST_FILE = Aarticle/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phyllisApps.Aarticle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
