@@ -12,8 +12,8 @@ import KeychainSwift
 
 class LoginController: UIViewController {
     
-//    let networkStack = NetworkStack()
-//    let userPersistence = UserPersistence()
+    let networkStack = NetworkStack()
+    let userPersistence = UserPersistence()
     
     // Create the container for user input
     let inputsContainerView: UIView = {
@@ -43,21 +43,21 @@ class LoginController: UIViewController {
         return button
     }()
     
-    lazy var logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "BreezyTravelerLogo")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-        
-    }()
-    func setupLogoImageView() {
-        // Need x, y, width, and height contraints
-        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        logoImageView.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
-        logoImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        logoImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
-    }
+//    lazy var logoImageView: UIImageView = {
+//        let imageView = UIImageView()
+//        imageView.image = UIImage(named: "BreezyTravelerLogo")
+//        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imageView.contentMode = .scaleAspectFill
+//        return imageView
+//
+//    }()
+//    func setupLogoImageView() {
+//        // Need x, y, width, and height contraints
+//        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        logoImageView.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
+//        logoImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+//        logoImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+//    }
     
     @objc func handleLoginRegister() {
         if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
@@ -73,43 +73,29 @@ class LoginController: UIViewController {
         }
         
         
-//        let userLogin = UserLogin(username: username, password: password)
+        let userLogin = UserLoginRegister(username: username, password: password)
         
-//        networkStack.login(a: userLogin) {[weak self] (result) in
-//            guard let unwrappedSelf = self else { return }
-//
-//            switch result {
-//            case .success(let loggedInUser):
-//                print(loggedInUser)
+        networkStack.login(a: userLogin) {[weak self] (result) in
+            guard let unwrappedSelf = self else { return }
+
+            switch result {
+            case .success(let loggedInUser):
+                print(loggedInUser)
 //                unwrappedSelf.userPersistence.setCurrentUser(currentUser: loggedInUser)
-//                unwrappedSelf.userPersistence.loginUser(username: userLogin.username, password: userLogin.password)
-//
-//                // Go back to Trips ViewController
-//                // successfully logged in user
-//                unwrappedSelf.dismiss(animated: true, completion: nil)
-//
-//            case .failure(let userErrors):
-//                DispatchQueue.main.async {
-//                    unwrappedSelf.present(AlertViewController.showWrongUsernameOrPAsswordAlert(), animated: true, completion: nil)
-//                }
-//                print(userErrors.errors)
-//            }
-//        }
+                unwrappedSelf.userPersistence.loginUser(username: userLogin.username, password: userLogin.password)
+
+                // Go back to Trips ViewController
+                // successfully logged in user
+                unwrappedSelf.dismiss(animated: true, completion: nil)
+
+            case .failure(let userErrors):
+                DispatchQueue.main.async {
+                    unwrappedSelf.present(AlertViewController.showWrongUsernameOrPAsswordAlert(), animated: true, completion: nil)
+                }
+                print(userErrors.errors)
+            }
+        }
     }
-    
-//    let nameTextField: UITextField = {
-//        let tf = UITextField()
-//        tf.placeholder = "Name"
-//        tf.translatesAutoresizingMaskIntoConstraints = false
-//        return tf
-//    }()
-//
-//    let nameSeparatorView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
     
     let usernameTextField: UITextField = {
         let tf = UITextField()
@@ -124,20 +110,6 @@ class LoginController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-//    let emailTextField: UITextField = {
-//        let tf = UITextField()
-//        tf.placeholder = "Email address"
-//        tf.translatesAutoresizingMaskIntoConstraints = false
-//        return tf
-//    }()
-//
-//    let emailSeparatorView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = UIColor(r: 220, g: 220, b: 220)
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
     
     let passwordTextField: UITextField = {
         let tf = UITextField()
@@ -163,7 +135,6 @@ class LoginController: UIViewController {
         // When the login active: perform a check if the user data is correct
         UIView.performWithoutAnimation { loginRegisterButton.setTitle(title, for: .normal) }
         
-        
         // Do not change height of input container view
         inputContainerViewHeightAnchor?.constant = loginRegisterSegmentedControl.selectedSegmentIndex == 0 ? 100 : 100
         
@@ -187,13 +158,11 @@ class LoginController: UIViewController {
         view.addSubview(loginRegisterSegmentedControl)
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
-        view.addSubview(logoImageView)
         
         setupLoginRegisterSegmentedControl()
         setUpContainerView()
         
         setUpLoginRegisterButton()
-//        setupLogoImageView()
         handleLoginRegisterChange()
     }
     
@@ -222,27 +191,10 @@ class LoginController: UIViewController {
         inputContainerViewHeightAnchor?.isActive = true
         
         // All the subviews within the login Container View
-//        inputsContainerView.addSubview(nameTextField)
-//        inputsContainerView.addSubview(nameSeparatorView)
         inputsContainerView.addSubview(usernameTextField)
         inputsContainerView.addSubview(usernameSeparatorView)
-//        inputsContainerView.addSubview(emailTextField)
-//        inputsContainerView.addSubview(emailSeparatorView)
         inputsContainerView.addSubview(passwordTextField)
         
-        
-//        // Contraints: x, y, width, and height of Name field
-//        nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
-//        nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive = true
-//        nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
-//        nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/4)
-//        nameTextFieldHeightAnchor?.isActive = true
-        
-//        // Constraints for line below the Name
-//        nameSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive = true
-//        nameSeparatorView.topAnchor.constraint(equalTo: nameTextField.bottomAnchor).isActive = true
-//        nameSeparatorView.widthAnchor.constraint(equalTo: nameTextField.widthAnchor).isActive = true
-//        nameSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         // Contraints: x, y, width, and height of Name field
         usernameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
@@ -256,19 +208,6 @@ class LoginController: UIViewController {
         usernameSeparatorView.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor).isActive = true
         usernameSeparatorView.widthAnchor.constraint(equalTo: usernameTextField.widthAnchor).isActive = true
         usernameSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
-//        // Contraints: x, y, width, and height of Email field
-//        emailTextField.leftAnchor.constraint(equalTo: usernameTextField.leftAnchor).isActive = true
-//        emailTextField.topAnchor.constraint(equalTo: usernameSeparatorView.bottomAnchor).isActive = true
-//        emailTextField.widthAnchor.constraint(equalTo: nameTextField.widthAnchor).isActive = true
-//        emailTextFieldHeightAnchor = emailTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor)
-//        emailTextFieldHeightAnchor?.isActive = true
-//
-//        // Constraints for line below the email
-//        emailSeparatorView.leftAnchor.constraint(equalTo: usernameSeparatorView.leftAnchor).isActive = true
-//        emailSeparatorView.topAnchor.constraint(equalTo: emailTextField.bottomAnchor).isActive = true
-//        emailSeparatorView.widthAnchor.constraint(equalTo: emailTextField.widthAnchor).isActive = true
-//        emailSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         // Constrain x, y, width, and height of Password text field
         passwordTextField.leftAnchor.constraint(equalTo: usernameTextField.leftAnchor).isActive = true

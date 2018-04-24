@@ -12,7 +12,13 @@
 		B94D819B208FAB5500A09CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94D819A208FAB5500A09CAE /* Assets.xcassets */; };
 		B94D819E208FAB5500A09CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */; };
 		B94D81A7208FAC0800A09CAE /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D81A6208FAC0800A09CAE /* LoginController.swift */; };
+		B9704A77208FC14700AD7215 /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9704A76208FC14700AD7215 /* api.swift */; };
 		B982EC5B208FB047007AEC51 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B982EC5A208FB047007AEC51 /* extensions.swift */; };
+		B9D41A4E208FC23000A4E16B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A4D208FC23000A4E16B /* UserModel.swift */; };
+		B9D41A50208FC24E00A4E16B /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A4F208FC24E00A4E16B /* ArticleModel.swift */; };
+		B9D41A52208FC9CC00A4E16B /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */; };
+		B9D41A54208FCFEA00A4E16B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A53208FCFEA00A4E16B /* AlertViewController.swift */; };
+		B9D41A56208FD06100A4E16B /* Register+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D41A55208FD06100A4E16B /* Register+Handlers.swift */; };
 		D2E4545C6D4FC586D6820513 /* Pods_Aarticle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B2C48D4DBAAE97A616730B /* Pods_Aarticle.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +32,13 @@
 		B94D819D208FAB5500A09CAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B94D819F208FAB5500A09CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B94D81A6208FAC0800A09CAE /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B9704A76208FC14700AD7215 /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		B982EC5A208FB047007AEC51 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		B9D41A4D208FC23000A4E16B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = Aarticle/Utility/UserModel.swift; sourceTree = SOURCE_ROOT; };
+		B9D41A4F208FC24E00A4E16B /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayer.swift; sourceTree = "<group>"; };
+		B9D41A53208FCFEA00A4E16B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		B9D41A55208FD06100A4E16B /* Register+Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Register+Handlers.swift"; sourceTree = "<group>"; };
 		E44F5E0F3319EE1DFBC9628D /* Pods-Aarticle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aarticle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aarticle/Pods-Aarticle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,10 +92,12 @@
 		B94D8192208FAB5300A09CAE /* Aarticle */ = {
 			isa = PBXGroup;
 			children = (
-				B982EC5C208FBFCF007AEC51 /* Networking */,
 				B94D8193208FAB5300A09CAE /* AppDelegate.swift */,
 				B94D81A5208FABF200A09CAE /* User */,
 				B94D8197208FAB5300A09CAE /* Main.storyboard */,
+				B9CC288D208FC1D30000F77E /* Models */,
+				B9704A76208FC14700AD7215 /* api.swift */,
+				B9D41A51208FC9CC00A4E16B /* NetworkingLayer.swift */,
 				B982EC59208FB032007AEC51 /* Utility */,
 				B94D819A208FAB5500A09CAE /* Assets.xcassets */,
 				B94D819C208FAB5500A09CAE /* LaunchScreen.storyboard */,
@@ -96,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				B94D81A6208FAC0800A09CAE /* LoginController.swift */,
+				B9D41A55208FD06100A4E16B /* Register+Handlers.swift */,
+				B9D41A53208FCFEA00A4E16B /* AlertViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -108,11 +124,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		B982EC5C208FBFCF007AEC51 /* Networking */ = {
+		B9CC288D208FC1D30000F77E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B9D41A4D208FC23000A4E16B /* UserModel.swift */,
+				B9D41A4F208FC24E00A4E16B /* ArticleModel.swift */,
 			);
-			name = Networking;
+			name = Models;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +230,7 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -218,6 +238,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -250,8 +271,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94D81A7208FAC0800A09CAE /* LoginController.swift in Sources */,
+				B9D41A56208FD06100A4E16B /* Register+Handlers.swift in Sources */,
 				B94D8194208FAB5300A09CAE /* AppDelegate.swift in Sources */,
+				B9704A77208FC14700AD7215 /* api.swift in Sources */,
+				B9D41A54208FCFEA00A4E16B /* AlertViewController.swift in Sources */,
+				B9D41A4E208FC23000A4E16B /* UserModel.swift in Sources */,
+				B9D41A50208FC24E00A4E16B /* ArticleModel.swift in Sources */,
 				B982EC5B208FB047007AEC51 /* extensions.swift in Sources */,
+				B9D41A52208FC9CC00A4E16B /* NetworkingLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
