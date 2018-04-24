@@ -8,5 +8,6 @@ target 'Aarticle' do
   # Pods for Aarticle
   pod 'Moya', '~> 11.0'
   pod 'KeychainSwift', '~> 11.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
 end
