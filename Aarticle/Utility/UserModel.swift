@@ -11,7 +11,9 @@ import Foundation
 import KeychainSwift
 
 struct User: Codable {
-    let id: Int
+    
+    // TODO: Use coding keys to convert to swifty naming convention
+    let id: String
     let username: String
     let password: String
 //    let token: String?

@@ -64,16 +64,20 @@ struct NetworkStack {
                 // FIXME: handle 401 (invalid credentials)
                 switch response.statusCode {
                 case 200:
-                    guard let user = try? JSONDecoder().decode(User.self, from: response.data) else {
-                        return assertionFailure("JSON data not decodable")
+                    do {
+                        let user = try JSONDecoder().decode(User.self, from: response.data)
+                        callback(.success(user))
+                    } catch {
+                        print(error)
                     }
-                    callback(.success(user))
-                    
+ 
                 case 201:
-                    guard let user = try? JSONDecoder().decode(User.self, from: response.data) else {
-                        return assertionFailure("JSON data not decodable")
+                    do {
+                        let user = try JSONDecoder().decode(User.self, from: response.data)
+                        callback(.success(user))
+                    } catch {
+                        assertionFailure(error.localizedDescription)
                     }
-                    callback(.success(user))
                     
                 case 401:
                     let errors = APIUserError(errors: ["Invalid Credentials"])
